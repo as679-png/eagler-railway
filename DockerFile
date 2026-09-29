@@ -1,0 +1,8 @@
+FROM eclipse-temurin:21-jre
+
+WORKDIR /app
+COPY . /app
+
+EXPOSE 8080
+
+CMD ["java", "-Xmx1024M", "-Xms512M", "-jar", "paper.jar", "nogui"]
